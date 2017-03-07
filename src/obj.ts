@@ -1,4 +1,4 @@
-import {Material} from "./Mesh";
+import {Material} from "./mesh";
 import {Vector3} from "./vector";
 /**
  * Created by nidin on 2017-02-18.
@@ -19,7 +19,6 @@ export async function loadPPM(fileName: string, i: number) {
     let response = await fetch(fileName);
     let contents = await response.text();
 }
-
 
 export function loadMTL(contents: string, base = "") {
 

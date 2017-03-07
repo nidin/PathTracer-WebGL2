@@ -1,3 +1,4 @@
+///<reference path="../src/declaration.d.ts" />
 // import {parseOBJ, Vector3} from "xray";
 // import {xray, parseOBJ} from "xray";
 // import {mtls, parseOBJ, loadMTL, Mesh, Vector3} from "../src/xray";

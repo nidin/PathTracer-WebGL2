@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall":"npm run build",
+    "build":"tsc -p ./test",
+    "watch":"tsc -w -p ./test"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/01alchemist/PathTracer-WebGL2#readme",
   "dependencies": {
+    "typescript": "^2.2.1",
     "systemjs": "^0.20.9"
   }
 }

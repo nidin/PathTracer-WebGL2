@@ -166,16 +166,16 @@ export class Mesh {
     }
 
     loadOBJ(url: string, position: Vector3, scale: number) {
-        let geometry = OBJLoader.parseOBJ(fs.getTextFile(url));
-        this.triangles = geometry.triangles;
+        // let geometry = OBJLoader.parseOBJ(fs.getTextFile(url));
+        // this.triangles = geometry.triangles;
+        //
+        // let haveLightSource = this.prepareMaterials(geometry.materialIds);
+        //
+        // this.calculateBBox();
+        // if (haveLightSource) this.prepareLightSources();
 
-        let haveLightSource = this.prepareMaterials(geometry.materialIds);
-
-        this.calculateBBox();
-        if (haveLightSource) this.prepareLightSources();
-
-        // let obj = parseOBJ(fs.getTextFile(url));
-        // this.load(obj, position, scale);
+        let obj = parseOBJ(fs.getTextFile(url));
+        this.load(obj, position, scale);
     }
 
     private prepareMaterials(materialIds) {

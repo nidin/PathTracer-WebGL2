@@ -7,4 +7,3 @@ export * from "./bbox";
 export * from "./vector";
 export * from "./mesh";
 export * from "./obj";
-export * from "./PhotonMapper";

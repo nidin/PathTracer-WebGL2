@@ -136,7 +136,7 @@ export class PathTracer {
         // gl.clearColor(0.0, 0.0, 0.0, 0.0);
         gl.clearColor(0.5, 0.5, 0.5, 1.0);
 
-        canonicalCameraPosition = new Vector3(0.0, 0.0, 1500.0);
+        canonicalCameraPosition = new Vector3(0.0, 0.0, 15.0);
         fieldOfView = 45.0;
         lookAtPosition = new Vector3(0.0, 0.0, 0.0);
         gpurt.camera.set(canonicalCameraPosition, lookAtPosition, imageResolution, imageResolution, fieldOfView);

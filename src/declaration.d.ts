@@ -13,6 +13,8 @@ interface WebGLRenderingContext {
     DRAW_FRAMEBUFFER: number;
     MAX_COLOR_ATTACHMENTS: number;
     MAX_DRAW_BUFFERS: number;
+    FRAMEBUFFER_INCOMPLETE_MULTISAMPLE: number;
+    RENDERBUFFER_SAMPLES: number;
     COLOR: number;
     DEPTH_COMPONENT32F: number;
     COLOR_ATTACHMENT1: number;
