@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <!--<script src="../libs/require.js"></script>-->
+    <script src="../libs/gl-matrix.js"></script>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script>
+        exports = window.exports || {};
+        System.config({
+            baseURL: "../",
+            packages: {
+                "test": {
+                    format: "register",
+                    defaultExtension: "js"
+                },
+                "src": {
+                    format: "register",
+                    defaultExtension: "js"
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+<canvas id="xray" width="512" height="512" style="background: #000"></canvas>
+    <script>
+        let canvas = document.getElementById("xray");
+        window.gl = canvas.getContext("webgl2");
+        gl.clearColor(0.5, 0.5, 0.5, 1.0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+
+        System.import('test/PathTracerTest').then(function (module) {
+            window.app = new module.PathTracerTest();
+        }, console.error.bind(console));
+    </script>
+</body>
+</html>
