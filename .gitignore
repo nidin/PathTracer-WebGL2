@@ -44,3 +44,13 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+src/**/*.js
+*.js.map
+.DS_Store
+.idea/
+node_modules/
+test/.DS_Store
+test/PathTracerTest.js
+test/models/.DS_Store
+test/models/dragon_2/.DS_Store
+test/models/minimum-raytrace-obj/.DS_Store
